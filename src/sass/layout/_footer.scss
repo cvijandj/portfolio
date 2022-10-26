@@ -1,0 +1,160 @@
+.footer {
+  background-color: $dark-grey;
+  color: $white-color;
+  padding: 4.8rem 0;
+
+
+  @include respond(phone) {
+    border: 0px;
+  }
+
+  &__text {
+    color: darken($white-color, 50%);
+    font-size: 1.3rem;
+
+    a {
+      color: darken($white-color, 50%);
+      font-size: 1.3rem;
+      transition: all 0.4s;
+      display: inline-block;
+      background-color: $dark-grey;
+
+      &:hover,
+      &:active {
+        color: #b07602;
+        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  & hr {
+    margin: 1rem auto;
+    border: 0;
+    width: 50%;
+    border-top: 2px solid grey;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white-color;
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    margin: $default-font-size $default-font-size;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.back-to-top i {
+  color: $white-color;
+  margin: 1rem 0 $default-font-size;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+
+.header:hover{
+  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+.header {
+  height: 8vh;
+  width: 100vw;
+  background-color: $color-gray;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 1px 5px, inset rgba(0,0,0,0.15) 0px -1px 5px;
+  -moz-box-shadow:rgba(0,0,0,0.8) 0px 1px 5px, inset rgba(0,0,0,0.15) 0px -1px 5px;
+  -o-box-shadow:rgba(0,0,0,0.8) 0px 1px 5px, inset rgba(0,0,0,0.15) 0px -1px 5px;
+  box-shadow:rgba(0,0,0,0.8) 0px 1px 5px, inset rgba(0,0,0,0.15) 0px -1px 5px;
+
+  @include respond(phone) {
+    height: 8vh;
+    padding:1rem;
+    
+  }
+  &__nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.3rem 5rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 100;
+    width: 100vw;
+    transition: 0.6s;
+    @include respond(phone) {
+      padding: 0.3rem 1rem;
+     
+      justify-content: space-evenly;
+      align-items: flex-end;
+     
+      
+      
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    @include respond(phone) {
+      //margin-bottom: 2%;
+    
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 7rem;
+    
+    @include respond(phone) {
+      margin-right: 0.8rem;
+    }
+  }
+  }
+
+  //&__item {
+   // &:last-child{
+   //   margin-left: 50rem
+   // }
+  //}
+
+  &__link {
+    font-size: 1.6rem;
+    color: $color-blue;
+    font-weight: 400;
+    text-decoration: none;
+
+    @include respond(phone) {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+  }
+}
