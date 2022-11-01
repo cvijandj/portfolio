@@ -1,0 +1,40 @@
+#Stack {
+    background-color: $grey;
+    color: $white-color;
+    padding: 20vh 0;
+  
+  
+    @include respond(phone) {
+      border: 0px;
+    }
+  
+    &__text {
+      color: darken($white-color, 50%);
+      font-size: 1.3rem;
+  
+      
+    }
+}
+  
+.stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $white-color;
+      font-size: 3rem;
+      width: 5rem;
+      height: 5rem;
+      margin: $default-font-size $default-font-size;
+      transition: all 0.2s ease-in;
+  
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+}
