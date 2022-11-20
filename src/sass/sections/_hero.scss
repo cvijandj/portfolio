@@ -1,6 +1,6 @@
 #hero {
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   border-bottom: 0px;
@@ -9,7 +9,7 @@
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
   margin-bottom: 0;
-  top: 0;
+  top: 0rem;
   left: 0;
   bottom: 0;
   right: 0;
@@ -68,13 +68,14 @@ margin-left: 3px;
   
   border-radius: 10px !important;
   @include respond(phone) {
+    margin-top: 5rem;
   //  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 86%, 75% 87%, 75% 100%, 50% 88%, 0 88%);
   //clip-path: polygon(0% 0%, 100% 0%, 100% 86%, 75% 87%, 75% 100%, 50% 88%, 0 88%);
   }
   }
   .log {
     height: 38rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
     @include respond(phone) {
       height: 20rem;
     }
